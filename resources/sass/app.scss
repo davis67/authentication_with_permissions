@@ -15,3 +15,10 @@
 
 @import '~buefy/src/scss/buefy';
 
+//custom SASS pages for the project
+@import 'overides';
+@import 'helpers';
+@import 'styles';
+@import 'manage';
+
+

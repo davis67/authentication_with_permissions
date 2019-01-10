@@ -1,0 +1,114 @@
+#admin-side-menu {
+	position: fixed;
+	top:4em;
+	height: 100vh;
+	left:-200px;
+	width: 200px;
+	background:white;
+	overflow-y: scroll;
+	transition:left 0.5s ease-in-out;
+	&.is-active {
+		left:0;
+		transition:left 0.3s ease-in-out;
+	}
+	@include desktop {
+		left:0;
+	}
+
+	li {
+		
+		a:hover {
+			color:#2C96DF;
+
+		}
+	}
+}
+#admin-slideout-button {
+	transition:0.3s;
+	&.is-active {
+		transition: 0.4s;
+		transform:rotateY(180deg);
+	}
+}
+.management-area{
+	position:absolute;
+	top:4.0rem;
+	left:200px;
+	right:0;
+}
+
+.flex-container {
+	margin:10px 25px;
+}
+.submenu {
+	max-height:0;
+	overflow:hidden;
+	transition:all 0.4s ease-in-out;
+}
+
+.menu-list li ul {
+	margin-top:0;
+	margin-bottom:0;
+}
+.widget-area{
+	min-height:75px;
+	padding:10px;
+	border-bottom:1px solid rgba(10, 10, 10, 0.1);
+	&.author-widget{
+
+		.selected-author {
+			display:flex;
+			align-content:flex-start;
+			img {
+				border-radius:25px;
+			}
+		
+		.author {
+			margin:auto 0 auto 10px;
+			.subtitle {
+				font-weight: 300;
+				font-size: 0.8em;
+			}
+		}
+ }
+}
+ &.post-status-widget{
+	.status {
+		display:flex;
+		align-content:flex-start;
+
+		.status-icon {
+			min-width:50px;
+			.icon {
+				width:100%;
+			}
+			i {
+				text-align: center;
+			}
+		}
+		.status-details {
+			margin-left:10px;
+			h4 {
+				font-weight:300;
+				span.status-emphasis {
+					font-weight: 800;
+				}
+			}
+			p{
+				font-weight:300;
+				font-size:0.8em;
+			}
+		}
+	} 
+}
+&.publish-buttons-widget {
+		display:flex;
+		min-height: 50px;
+
+		.primary-button-action, .secondary-button-action {
+			flex:1;
+			margin:0 5px;
+		}
+	} 
+
+}
